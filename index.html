@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>版权归凌凯航所有</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family:  'icomoon', '微软雅黑';
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?7kkyc2');
+    src: url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a{
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+a:hover{
+    color: #0099ff;
+
+}
+
+body{
+    background-color: #f3f5f7;
+}
+
+li,dd,dt{
+    list-style: none;
+}
+
+.miaodian{
+    display: block;
+    position: fixed;
+    width: 47px;
+    height: 47px;
+    bottom: 400px;
+    line-height: 47px;
+    text-align: center;
+    font-size: xx-large;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transition: all 0s;
+}
+
+.miaodian1{
+    right: 1%;
+}
+
+.miaodian2{
+    left: 1%;
+}
+
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+
+.clearfix {
+    *zoom:1;
+} 
+
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 42px;
+    margin: 30px auto;
+}
+
+.logo{
+    float: left;
+    width: 198px;
+}
+
+.nav{
+    float: left;
+    margin-left: 60px;
+}
+
+.nav ul li{
+    float: left;
+    margin: 0 15px;
+}
+
+.nav ul li a{
+    display: block;
+    height: 42px;
+    font-size: 18px;
+    line-height: 42px;
+    padding: 0 10px;
+}
+
+.nav ul li a:hover{
+    border-bottom: 2px solid #0099ff;
+    color: #0099ff;
+}
+
+.search{
+    float: left;
+    margin-left: 70px;
+    width: 412px;
+    height: 42px;
+    background-color:  #0099ff;
+}
+
+.search input{
+    float: left;
+    padding-left: 15px;
+    height: 40px;
+    width: 345px;
+    border: 1px solid  #0099ff;
+    border-right: 0;
+    font-size: 14px;
+}
+
+.search button{
+    float: left;
+    width: 50px;
+    height: 42px;
+    border: 0;
+    background: url(images/btn.png);
+    cursor:pointer
+}
+
+.user{
+    float: right;
+    color: #666666;
+    font-size: 14px;
+    margin-right: 30px;
+    line-height: 42px;
+}
+
+.user a::before{
+    font-size: 30px;
+    font-family: 'icomoon';
+    content: '\e903';
+}
+
+.banner{
+    height: 421px;
+    background-color: #330066;
+}
+
+.banner .w{
+    height: 421px;
+    background: url(images/banner2.png) no-repeat top center;
+}
+
+
+
+.w .subnav{
+    float: left;
+    width: 191px;
+    height: 421px;
+    background: rgba(0,0,0,.3);
+}
+
+
+.subnav  a{
+    position: relative;
+    width: 170px;
+    height: 47px;
+    line-height: 47px;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 21px;
+}
+
+.subnav a::after{
+    position: absolute;
+    right: 20px;
+    width: 18px;
+    font-family: 'icomoon';
+    content: '\e906';
+    font-size: 14px;
+    color: pink;
+}
+
+
+.subnav a:hover{
+    background-color: orange;
+    color: aqua;
+}
+
+.subnav a:hover::after {
+    color: aqua;
+}
+
+.w  .course{
+    float: right;
+    width: 227px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.w  .course h2{
+    height: 48px;
+    width: 227px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #99ccff;
+    color: white;
+    
+}
+.w .course .bd{
+    height: 254px;
+    background-color: #ffffff;
+}
+
+.box {
+    margin-bottom: 40px;
+}
+
+.bd{
+    padding: 22px;
+}
+
+.bd ul li{
+    text-align: center;
+    padding: 14px 0;
+    border-bottom: 1px #999999 solid;
+}
+
+.bd ul li h4{
+    font-size: 16px;
+    color: #666666;
+}
+
+.bd ul li p{
+    font-size: 14px;
+    color: #999999;
+}
+
+.course a{
+    display: inline-block;
+    width: 180px;
+    height: 40px;
+    margin-top: 7px;
+    text-align: center;
+    line-height: 40px;
+    border: #00a4ff solid 2px;
+    color: #0099ff;
+}
+
+.course a:hover{
+   background-color: #99ccff;
+}
+
+.goods{
+    height: 10px;
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow:  0px 4px 4px rgba(0,0,0,.3);
+    line-height: 10px;
+    padding: 35px 0;
+}
+
+.goods h3{
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #0099ff;
+}
+
+.goods ul{
+    float: left;
+    margin-left: 30px;
+}
+
+.goods ul li{
+    position: relative;
+    float: left;
+}
+
+.goods ul li a{
+    float: left;
+    padding: 0 40px;
+    font-size: 16px;
+    border-left: #cccccc solid 1px;
+    
+}
+
+.goods ul li a::after{
+    left: 7px;
+    position: absolute;
+    font-size: 30px;
+    font-family: 'icomoon';
+}
+
+.goods ul li:nth-child(1) a::after{
+    color: skyblue;
+    content: '\e900';
+}
+.goods ul li:nth-child(2) a::after{
+    content: '\e904';
+    color: #e34f26;
+}
+
+.goods ul li:nth-child(2) a::before{
+    position: absolute;
+    font-size: 30px;
+    font-family: 'icomoon';
+    right: 7px;
+    content: '\e902';
+    color: rgb(21, 114, 182);
+}
+
+.goods ul li:nth-child(3) a::after{
+    content: '\e909';
+    color: #4fc08d;
+}
+
+.goods ul li:nth-child(4) a::after{
+    content: '\e901';
+    color: #239120;
+}
+
+.goods ul li:nth-child(5) a::after{
+    content: "\e908";
+    color: rgb(55, 118, 171);
+}
+
+.goods .mod{
+    float: right;   
+    margin-right: 30px;
+    font-size: 14px;
+    color: #0099ff;
+}
+
+.bh{
+    margin-top: 35px;
+    height: 42px;
+}
+
+.bh h5{
+    float: left;
+    font-size: 20px;
+    color: #333333;
+}
+
+.bh a{
+    float: right;
+    margin-top: 10px;
+    margin-right: 32px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.bb {
+    width: 1225px;
+}
+
+
+.bb ul li{
+    position: relative;
+    float: left;
+    width:230px; 
+    height: 271px ;          
+    margin-right: 15px; 
+    margin-bottom: 15px;
+
+}
+
+.bb ul li a em img{
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+
+.bb ul li a>img{
+    width: 100%;
+}
+
+.bb ul li a:hover{
+    box-shadow:  0px 4px 4px rgba(0,0,0,.3);
+    transition: all .2s linear;
+}
+
+.bb ul li a:hover{
+    background-color: #ff7c2d;
+}
+
+.bb ul li a:hover div .p1{
+    color: blue;
+}
+
+.bb ul li a div{
+    height: 115px;
+    background-color: #fff;
+    padding: 0 21px 0 25px;
+}
+
+.bb ul li a div .p1{
+    padding: 24px 0 21px 0;
+    color: #050505;
+    font-size: 14px;
+}
+
+.bb ul li a div .p2{
+    font-size: 12px;
+    color: #999999;
+}
+
+.bb ul li a div .p2 span{
+    font-size: 12px;
+    color: #ff7c2d;
+}
+
+.footer{
+    height: 230px;
+    background-color: rgba(51,51,51,.3);
+
+}
+
+.footer .w{
+    padding-top: 35px;
+}
+
+.copyright p{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.copyright{
+   float: left;
+}
+
+.copyright a{
+    width: 120px;
+    height: 35px;
+    border: 1px #0099ff solid;
+    text-align: center;    
+    line-height: 35px;
+    color: #0099ff;
+    font-size: 16px;
+}
+
+.copyright a:hover{
+    background-color: skyblue;
+}
+.links dl .dt{
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #333333;
+}
+
+
+.links dl dd a{
+    margin-bottom: 10px;
+    
+    font-size: 12px;
+    color: #333333;
+}
+
+.links dl dd a:hover{
+    color: #0099ff;
+
+}
+
+.links dl{
+    margin-left: 120px;
+    margin-right: 32px;
+    float: right;
+}
+
+.links{
+    float: right;
+}
+  </style> 
+</head>
+
+<body>
+    <div class="w header">
+        <img src="images/logo.png" class="logo">
+        <div class="nav">
+            <ul>
+                <li><a href="#" title="首页">首页</a></li>
+                <li><a href="#" title="课程">课程</a></li>
+                <li><a href="#" title="职业规划">职业规划</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="输入关键字">
+            <button title="搜索"></button>
+        </div>
+        <div class="user">
+            <a href="#" title="用户">
+                QQ-lilei
+            </a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="w">
+            <div class="subnav">
+                <a href="#" title="前端开发">前端开发</a>
+                <a href="#" title="后端开发">后端开发</a>
+                <a href="#" title="移动开发">移动开发</a>
+                <a href="#" title="人工智能">人工智能</a>
+                <a href="#" title="商业预测">商业预测</a>
+                <a href="#" title="云计算&大数据">云计算&大数据</a>
+                <a href="#" title="运维&测试">运维&测试</a>
+                <a href="#" title="UI设计">UI设计</a>
+                <a href="#" title="新媒体&短视频">新媒体&短视频</a>
+            </div>
+            <div class="course">
+                <h2>我的课程表</h2>
+                <div class="bd">
+                    <ul>
+                        <li>
+                            <h4>继续学习 程序语言设计</h4>
+                            <p>正在学习-使用对象</p>
+                        </li>
+                        <li>
+                            <h4>继续学习 程序语言设计</h4>
+                            <p>正在学习-使用对象</p>
+                        </li>
+                        <li>
+                            <h4>继续学习 程序语言设计</h4>
+                            <p>正在学习-使用对象</p>
+                        </li>
+                    </ul>
+                    <a href="#" title="全部课程">全部课程</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="goods w">
+        <h3>精品推荐</h3>
+        <ul>
+            <li>
+                <a href="#" title="C/C++">C/C++</a>
+            </li>
+            <li>
+                <a href="#" title="HTML5/CSS3">HTML5/CSS3</a>
+
+            </li>
+            <li>
+                <a href="#" title="Vue">Vue</a>
+
+            </li>
+            <li>
+                <a href="#" title="C#">C#</a>
+
+            </li>
+            <li>
+                <a href="#" title="Python">Python</a>
+
+            </li>
+        </ul>
+        <li>
+            <a class="mod" href="#" title="修改兴趣">修改兴趣</a>
+        </li>
+    </div>
+
+    <div class="box w clearfix">
+        <div class="bh">
+            <h5>精品推荐</h5>
+            <a href="#" title="查看全部">查看全部</a>
+        </div>
+        <div class="bb">
+            <ul>
+                <li>
+                    <a href="#">
+                        <em>
+                            <img src="images/hot.png" alt="">
+                        </em>
+                        <img src="images/pic1.png" alt="">
+                        <div>
+
+                            <p class="p1" title="Think PHP 5.0 博客系统实战项目演练">Think PHP 5.0 博客系统实战项目演练</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+
+                        <img src="images/pic2.png" alt="">
+                        <div>
+                            <p class="p1" title="Android 网络图片加载框架详解">Android 网络图片加载框架详解</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>
+                            <img src="images/new.png" alt="">
+                        </em>
+                        <img src="images/pic3.png" alt="">
+                        <div>
+                            <p class="p1" title="Angular 2 最新框架+主流技术+项目实战">Angular 2 最新框架+主流技术+项目实战</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>
+                            <img src="images/new.png" alt="">
+                        </em>
+                        <img src="images/pic4.png" alt="">
+                        <div>
+                            <p class="p1" title="Android Hybrid APP开发实战 H5+原生！">Android Hybrid APP开发实战 H5+原生！</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/pic4.png" alt="">
+                        <div>
+                            <p class="p1" title="Android Hybrid APP开发实战 H5+原生！">Android Hybrid APP开发实战 H5+原生！</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>
+                            <img src="images/hot.png" alt="">
+                        </em>
+                        <img src="images/pic1.png" alt="">
+                        <div>
+                            <p class="p1" title=" Think PHP 5.0 博客系统实战项目演练 "> Think PHP 5.0 博客系统实战项目演练 </p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/pic2.png" alt="">
+                        <div>
+                            <p class="p1" title="Android 网络图片加载框架详解"> Android 网络图片加载框架详解</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>
+                            <img src="images/new.png" alt="">
+                        </em>
+                        <img src="images/pic3.png" alt="">
+                        <div>
+                            <p class="p1" title="Angular 2 最新框架+主流技术+项目实战">Angular 2 最新框架+主流技术+项目实战</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+
+                        <img src="images/pic4.png" alt="">
+                        <div>
+                            <p class="p1" title="Android Hybrid APP开发实战 H5+原生！">Android Hybrid APP开发实战 H5+原生！</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em>
+                            <img src="images/new.png" alt="">
+                        </em>
+                        <img src="images/pic4.png" alt="">
+                        <div>
+                            <p class="p1" title="Android Hybrid APP开发实战 H5+原生！">Android Hybrid APP开发实战 H5+原生！</p>
+                            <p class="p2"><span>高级</span> • 1125人在学习</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="w">
+            <div class="copyright">
+                <img src="images/logo.png" alt="">
+                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br>
+                    © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                <a href="#" title="下载app">下载app</a>
+            </div>
+            <div class="links">
+                <dl>
+                    <dd class="dt">关于学成网</dd>
+                    <dd><a href="#" title="关于">关于</a></dd>
+                    <dd><a href="#" title="管理团队">管理团队</a></dd>
+                    <dd><a href="#" title="工作机会">工作机会</a></dd>
+                    <dd><a href="#" title="客服服务">客服服务</a></dd>
+                    <dd><a href="#" title="帮助">帮助</a></dd>
+                </dl>
+                <dl>
+                    <dd class="dt">新手指南</dd>
+                    <dd><a href="#" title="如何注册">如何注册</a></dd>
+                    <dd><a href="#" title="如何选课">如何选课</a></dd>
+                    <dd><a href="#" title="如何拿到毕业证">如何拿到毕业证</a></dd>
+                    <dd><a href="#" title="学分是什么">学分是什么</a></dd>
+                    <dd><a href="#" title="考试未通过怎么办">考试未通过怎么办</a></dd>
+                </dl>
+                <dl>
+                    <dd class="dt" title="合作伙伴">合作伙伴</dd>
+                    <dd><a href="#" title="合作机构">合作机构</a></dd>
+                    <dd><a href="#" title="合作导师">合作导师</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
